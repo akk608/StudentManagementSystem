@@ -53,3 +53,26 @@ INSERT INTO Enrolments (StudentID, CourseID, EnrolmentDate) VALUES
 GO
 
 PRINT 'Database setup complete!';
+-- Grades Table - Added for Assessment 3
+-- Author: Ankit Kumar
+
+USE StudentManagementDB;
+GO
+
+CREATE TABLE Grades (
+    GradeID       INT IDENTITY(1,1) PRIMARY KEY,
+    EnrolmentID   INT NOT NULL,
+    GradeValue    NVARCHAR(5)   NOT NULL,
+    GradeDate     DATE          NOT NULL,
+    Comments      NVARCHAR(500) NULL,
+    FOREIGN KEY (EnrolmentID) REFERENCES Enrolments(EnrolmentID)
+);
+GO
+
+INSERT INTO Grades (EnrolmentID, GradeValue, GradeDate, Comments) VALUES
+(1, 'A',  '2026-05-01', 'Excellent work'),
+(2, 'B+', '2026-05-01', 'Good effort'),
+(3, 'A-', '2026-05-01', 'Well done');
+GO
+
+PRINT 'Grades table created!';
