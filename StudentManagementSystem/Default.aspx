@@ -33,6 +33,7 @@
         .card-blue   { border-top: 4px solid #2980b9; }
         .card-green  { border-top: 4px solid #27ae60; }
         .card-purple { border-top: 4px solid #8e44ad; }
+        .card-orange { border-top: 4px solid #e67e22; }
         .footer { text-align: center; padding: 30px; color: #aaa; font-size: 13px; }
     </style>
 </head>
@@ -66,6 +67,11 @@
                 <div class="icon">📋</div>
                 <h3>Enrolments</h3>
                 <p>Enrol students into courses and manage enrolment records.</p>
+            </a>
+<a href="Grades.aspx" class="card card-orange">
+                <div class="icon">📊</div>
+                <h3>Grades</h3>
+                <p>Record and manage student grades for each enrolment.</p>
             </a>
         </div>
     </div>
